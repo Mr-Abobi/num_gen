@@ -1,5 +1,6 @@
 #include <ctime>
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -11,23 +12,21 @@ int main(){
 
     if (ch == 'y')
     {   
-        // srand(time(1));
-        
-        int chouse1;
+        string chouse1;
         cout << "\n1 - по диапозону\n2 - случайное\n";
         cin >> chouse1;
-        while(chouse1 != 1 or chouse1 != 2)
+        while(chouse1 != "1" or chouse1 != "2")
         {
-            if(chouse1 == 1 or chouse1 == 2){
+            if(chouse1 == "1" or chouse1 == "2"){
                 break;
             }
             cout << "только 1 или 2\n";
             cin >>chouse1;
         }
         
+        int intchouse1 = stoi(chouse1);
         
-        
-        switch (chouse1)
+        switch(intchouse1)
         {
         case 1:
             //int diapozon;
