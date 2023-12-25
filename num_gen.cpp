@@ -10,8 +10,8 @@ int main(){
     cout << "начать? (y/n)\n";
     cin >> ch;
 
-    if (ch == 'y')
-    {   
+    if (ch == 'y' or ch == 'yes')
+    {  
         string chouse1;
         cout << "\n1 - по диапозону\n2 - случайное\n";
         cin >> chouse1;
@@ -29,14 +29,23 @@ int main(){
         switch(intchouse1)
         {
         case 1:
-            //int diapozon;
-            // cout << "введите диапозон";
-            // cin >> diapozon;
+            srand(time(0));
+            int start_diapozon,end_diapozon;
+            cout << "введите начало диапозона\n";
+            cin >> start_diapozon;
+            cout << "введите конец диапозона\n";
+            cin >> end_diapozon;
             
-            cout << "первый кейс";
+            int randomnum;
+            randomnum = rand() % (end_diapozon - start_diapozon + 1) + start_diapozon;
+            cout << "число сгенерированно: " << randomnum<< "\n";
+            
+            
             break;
         case 2:
-        cout << "второй кейс";
+        int randomnum2;
+        randomnum2 = rand();
+        cout << "число сгенерированно: " << randomnum2<< "\n";
         default:
         
             break;
