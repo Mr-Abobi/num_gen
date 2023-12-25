@@ -1,25 +1,54 @@
+#include <ctime>
 #include <iostream>
 
 using namespace std;
 
 int main(){
     setlocale(LC_ALL,"Rus");
-    // cout << "начать? (y/n)";
-    // char CHOUSE1;
-    // cin >> CHOUSE1;
-    // if(CHOUSE1 == "y")
     char ch;
-    cout << "начать?\n";
+    cout << "начать? (y/n)\n";
     cin >> ch;
 
-        if (ch == 'y')
+    if (ch == 'y')
     {   
-        cout << "you press \"y\"\n";
+        // srand(time(1));
+        
+        int chouse1;
+        cout << "\n1 - по диапозону\n2 - случайное\n";
+        cin >> chouse1;
+        while(chouse1 != 1 or chouse1 != 2)
+        {
+            if(chouse1 == 1 or chouse1 == 2){
+                break;
+            }
+            cout << "только 1 или 2\n";
+            cin >>chouse1;
+        }
+        
+        
+        
+        switch (chouse1)
+        {
+        case 1:
+            //int diapozon;
+            // cout << "введите диапозон";
+            // cin >> diapozon;
+            
+            cout << "первый кейс";
+            break;
+        case 2:
+        cout << "второй кейс";
+        default:
+        
+            break;
+        }
+        
+
     }
     else
     {
+        cout << "you\'re out";
         exit;
-        //cout << "you press \"n\"\n";
     }
     return 0;
 }
